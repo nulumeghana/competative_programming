@@ -1,0 +1,10 @@
+def duplicates(string):
+    mask=0
+    for char in string:
+        pos=ord(char)-ord('a')
+        if mask&(1<<pos):
+            print(char, end=" ")
+        else:
+            mask=mask|(1 << pos)
+string=input()
+duplicates(string)
